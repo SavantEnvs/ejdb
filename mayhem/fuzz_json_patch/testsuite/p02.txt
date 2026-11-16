@@ -1,0 +1,2 @@
+{"a":"v"}
+[{"op":"replace","path":"/a","value":{"x":[1]}},{"op":"test","path":"/a/x/0","value":1}]

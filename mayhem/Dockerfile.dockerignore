@@ -1,0 +1,9 @@
+# Bake the full repo (including .git) into the image; drop only local build artifacts and cruft.
+autark-cache*/
+*.o
+*.a
+*.so
+**/__pycache__/
+.DS_Store
+*.swp
+*~

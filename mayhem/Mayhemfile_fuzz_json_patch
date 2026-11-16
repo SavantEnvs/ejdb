@@ -1,0 +1,12 @@
+project: savantenvs/ejdb
+target: fuzz_json_patch
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_json_patch/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_json_patch
+    libfuzzer: true
+    timeout: 30
+    dictionary: /mayhem/mayhem/fuzz_json_patch/fuzz_json_patch.dict
+    env:
+      MFUZZ_COMPAT_LEVEL: '2'

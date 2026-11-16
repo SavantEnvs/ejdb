@@ -1,0 +1,12 @@
+project: savantenvs/ejdb
+target: fuzz_ejdb_query
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_ejdb_query/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_ejdb_query
+    libfuzzer: true
+    timeout: 30
+    dictionary: /mayhem/mayhem/fuzz_ejdb_query/fuzz_ejdb_query.dict
+    env:
+      MFUZZ_COMPAT_LEVEL: '2'

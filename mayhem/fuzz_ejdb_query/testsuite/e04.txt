@@ -1,0 +1,5 @@
+@c/[foo = "baz"] | apply {"n":10}
+{"foo":"bar","n":3}
+{"foo":"baz","n":1}
+{"foo":"bar","n":2}
+{"foo":"qux","n":5,"tags":["a","b"]}

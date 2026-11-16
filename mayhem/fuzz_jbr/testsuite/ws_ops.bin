@@ -1,0 +1,11 @@
+k1 add c1 {"a":1,"b":"x"}
+k2 get c1 1
+k3 set c1 2 {"z":[1,2]}
+k4 patch c1 1 [{"op":"replace","path":"/a","value":5}]
+k5 query c1 /* | /a
+k6 explain c1 /[a > 0]
+k7 idx c1 4 /b
+k8 rmi c1 4 /b
+k9 del c1 1
+k10 @c1/[a=5]
+k11 rmc c1

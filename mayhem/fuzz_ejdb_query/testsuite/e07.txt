@@ -1,0 +1,5 @@
+@c/[n in [1,2,3]]
+{"foo":"bar","n":3}
+{"foo":"baz","n":1}
+{"foo":"bar","n":2}
+{"foo":"qux","n":5,"tags":["a","b"]}

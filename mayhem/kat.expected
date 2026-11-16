@@ -1,0 +1,38 @@
+put 1
+put 2
+put 3
+put 4
+query @c/[foo = "bar"] | asc /n
+  3 {"foo":"bar","n":2}
+  1 {"foo":"bar","n":3}
+  rc=0 cnt=2
+query @c/[n > 1] | /{foo,n} | desc /n limit 2
+  4 {"foo":"qux","n":5}
+  1 {"foo":"bar","n":3}
+  rc=0 cnt=2
+query @c/tags/[** = "b"]
+  4 {"foo":"qux","n":5,"tags":["a","b"]}
+  rc=0 cnt=1
+query @c/* | count
+  rc=0 cnt=4
+query @c/[foo = "baz"] | apply {"n":10}
+  2 {"foo":"baz","n":10}
+  rc=0 cnt=1
+query @c/[foo = "baz"]
+  2 {"foo":"baz","n":10}
+  rc=0 cnt=1
+query @c/[foo = "qux"] | del
+  4 {"foo":"qux","n":5,"tags":["a","b"]}
+  rc=0 cnt=1
+query @c/* | count
+  rc=0 cnt=3
+query @c/[foo ==== 
+  parse error
+merge-patch
+  {"a":1,"b":{},"d":3}
+json-patch
+  {"a":[1,9,2,3]}
+binary-roundtrip
+  {"k":[true,null,1.5,"s"],"o":{"z":-7}}
+invalid-json
+  rejected

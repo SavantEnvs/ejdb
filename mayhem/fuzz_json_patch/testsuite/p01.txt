@@ -1,0 +1,2 @@
+{"a":[1,2,3],"b":"x"}
+[{"op":"add","path":"/a/1","value":9},{"op":"remove","path":"/b"}]

@@ -1,0 +1,2 @@
+{"a":{"b":1},"c":2}
+[{"op":"move","from":"/a/b","path":"/d"},{"op":"copy","from":"/c","path":"/e"}]

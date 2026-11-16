@@ -1,0 +1,1 @@
+@c/[foo = "bar"] | apply {"n":10}
